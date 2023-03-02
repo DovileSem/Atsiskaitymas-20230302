@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Straipsnio atnaujinimas
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Straipsnio atnaujinimas</h1>
+    <form method="post">
+
+        <!-- value= "{{ article.title }}", value= "{{ article.intro }}", value= "{{ article.text }}"- nurodo kas bus atnaujinama. -->
+
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}"
+            placeholder="Įveskite pavadinimą"><br>
+        <textarea name="intro" id="intro" class="form-control"
+            placeholder="Įveskite anonsą">{{ article.intro }}</textarea><br>
+        <textarea name="text" id="text" class="form-control"
+            placeholder="Įveskite pagrindinį tekstą">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-success" value="Atnaujinti">
+    </form>
+</div>
+
+{% endblock %}

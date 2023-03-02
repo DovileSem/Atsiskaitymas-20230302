@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Straipsniai
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Mokesčių naujienos</h1>
+
+    {% if articles|length > 0 %}
+    {% for el in articles %}
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Data: {{el.date.date() }}</b></p>
+        <a href="/posts/{{el.id}}" class="btn btn-warning">Detaliau</a>
+    </div>
+
+    {% endfor %}
+    {% else %}
+    <p>Šiuo metu puslapis atnaujinamas.</p>
+    {% endif %}
+</div>
+
+{% endblock %}

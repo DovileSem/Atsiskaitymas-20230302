@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Kainos skaičiuoklė
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+  <h1>Kainos skaičiuoklė</h1>
+
+  <table width="832" border="0" cellspacing="0" cellpadding="0" class="bgcolor1">
+    <tbody>
+      <tr valign="top" class="boxbg1">
+        <td height="360">
+
+          <div class="paddinfo1">
+            <div id="container">
+              <div id="content" role="main">
+
+
+                <div id="post-12" class="post-12 page type-page status-publish hentry">
+
+                  <div class="text">
+                    <div class="entry-content">
+                      <p>Atsižvelgiant į klientų poreikius, mūsų įmonė siūlo kelis buhalterinės apskaitos paslaugų
+                        apmokėjimo būdus:<br>
+                        Fiksuota kaina – Šis apmokėjimo būdas yra pritaikytas įmonėms išlaikančioms pastovią veiklos
+                        apimtį. Į paslaugų kainą yra įskaičiuotas piriminių dokumentų įvedimas į apskaitos programą,
+                        darbuotojų atlyginimų skaičiavimas, paruoštų finansinių ataskaitų ir deklaracijų pateikimas
+                        atsakingoms institucijoms.</p>
+                      <p>Kintanti kaina – Paslaugų kaina tiesiogiai priklauso nuo įmonės veiklos apimties. Sumažėjus
+                        dokumentų kiekiui, Jūs mokėsite už faktiškai atliktus darbus.</p>
+                      <p>Norėdami tiksliai sužinoti, kiek kainuotų buhalterinių paslaugų suteikimas Jūsų įmonei,
+                        parašykite mums laiškelį su savo poreikiais
+
+                        <a href="mailto:info@bfinansai.lt">info@bfinansai.lt</a><br>
+
+                        Norite sužinoti jau dabar?
+                      </p>
+                      <p><strong>Apskaičiuokime apytikslę pslaugų kainą Jūsų įmonei: </strong></p>
+
+                      <script>
+                        function countAll(numas) {
+                          var kiek = 0;
+                          for (i = 0; i < numas; i++) {
+                            kiek_t = document.getElementById('rez' + i).innerHTML;
+                            myarr = kiek_t.split(" Eur ");
+                            kiek += parseFloat(myarr[0]);
+                          }
+                          kiek_e = Math.round(kiek / 1);
+
+                          document.getElementById('rezas').innerHTML = (Math.round(kiek)) + ' Eur ';
+                        }
+                      </script>
+
+                      <table width="792" cellpadding="4" cellspacing="1">
+                        <tbody>
+                          <tr class="bgcolor3">
+                            <td class="tabletxt">Apskaičiuokime apytikslę paslaugų kainą Jūsų įmonei.</td>
+                            <td class="tabletxt">VNT</td>
+
+                            <td class="tabletxt">VISO</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Gaunamos sąskaitos faktūros vnt./mėn.<input type="hidden" id="val0" name="val0"
+                                value="1">
+                            </td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez0').innerHTML = Math.round((this.value*document.getElementById('val0').value)) + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez0">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Išrašomos sąskaitos faktūros vnt./mėn.<input type="hidden" id="val1" name="val1"
+                                value="1.5"></td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez1').innerHTML = Math.round((this.value*document.getElementById('val1').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez1">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Kasos dokumentai vnt./mėn.<input type="hidden" id="val2" name="val2" value="14"></td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez2').innerHTML = Math.round((this.value*document.getElementById('val2').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez2">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Kasos aparato aptarnavimas<input type="hidden" id="val3" name="val3" value="20"></td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez3').innerHTML = Math.round((this.value*document.getElementById('val3').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez3">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Avanso apyskaitų kiekis vnt./mėn.<input type="hidden" id="val4" name="val4" value="14">
+                            </td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez4').innerHTML = Math.round((this.value*document.getElementById('val4').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez4">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Ilgalaikis turtas vnt./mėn.<input type="hidden" id="val5" name="val5" value="12"></td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez5').innerHTML = Math.round((this.value*document.getElementById('val5').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez5">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Transporto&nbsp;priemonės&nbsp;vnt./mėn.<input type="hidden" id="val6" name="val6"
+                                value="5"></td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez6').innerHTML = Math.round((this.value*document.getElementById('val6').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez6">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Komandiruočių skaičius&nbsp;vnt./mėn.<input type="hidden" id="val7" name="val7"
+                                value="6">
+                            </td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez7').innerHTML = Math.round((this.value*document.getElementById('val7').value)*100)/100 + ' Eur'; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez7">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Darbuotojų skaičius&nbsp;vnt./mėn.<input type="hidden" id="val8" name="val8" value="15">
+                            </td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez8').innerHTML = Math.round((this.value*document.getElementById('val8').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez8">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td>Banko išrašo tvarkymas&nbsp;vnt./mėn.<input type="hidden" id="val9" name="val9"
+                                value="7">
+                            </td>
+                            <td><input style="width: 40px;"
+                                onkeyup="document.getElementById('rez9').innerHTML = Math.round((this.value*document.getElementById('val9').value)*100)/100 + ' Eur '; countAll(10);"
+                                class="input" value=" " type="text"></td>
+                            <td style="width: 100px;" id="rez9">0 Eur</td>
+                          </tr>
+                          <tr class="bgcolor4">
+                            <td colspan="2"><strong>PRELIMINARI PASLAUGŲ KAINA:</strong></td>
+                            <td><strong style="width: 200px;" id="rezas">0 Eur</strong></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  {% endblock %}

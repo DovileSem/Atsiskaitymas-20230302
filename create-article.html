@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Straipsnio įkėlimas
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Straipsnio įkėlimas</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" placeholder="Įveskite pavadinimą"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Įveskite anonsą"></textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Įveskite pagrindinį tekstą"></textarea><br>
+        <input type="submit" class="btn btn-success" value="Siųsti">
+    </form>
+</div>
+
+
+{% endblock %}
